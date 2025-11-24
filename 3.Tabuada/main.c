@@ -1,21 +1,31 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int apresentacao(int *x);
 int geratabuada(int *x);
 
 int main()
+
 {
+    printf("Bem vindo a nossa Tabuada!\n\n");
     int escolha;
-    apresentacao(&escolha);
-    geratabuada(&escolha);
+    do
+    {
+
+        apresentacao(&escolha);
+        geratabuada(&escolha);
+        /* code */
+    } while (escolha != 0);
 }
 
 int apresentacao(int *x)
 {
     int a;
-    printf("Bem vindo a nossa Tabuada!\n\n");
+
     printf("Qual Tabuada vamos ver?\n");
+    printf("Tecle 0 para sair\n");
     scanf("%d", &a);
+    system("cls");
     *x = a;
     return 0;
 }
